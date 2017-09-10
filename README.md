@@ -2,14 +2,14 @@
 
 A
 [fs.ReadStream](https://nodejs.org/api/fs.html#fs_class_fs_readstream)
-that supports seeking to arbtrary locations within a file.
+that supports seeking to arbitrary locations within a file.
 
 [![Build
 Status](https://travis-ci.org/isaacs/fs-readstream-seek.svg?branch=master)](https://travis-ci.org/isaacs/fs-readstream-seek)
 
 Note that this stream is _only_ appropriate for files where positioned
 reads are supported.  For abstract filesystem objects where you wish
-to do ordered asynhronous reads without specifying position (for
+to do ordered asynchronous reads without specifying position (for
 example, FIFO devices), use `fs.ReadStream` instead.
 
 ## USAGE
@@ -32,7 +32,7 @@ Everything on `fs.ReadStream` is supported, plus:
   memory, no new read is triggered, and the in-memory buffer is
   updated.  If the position is beyond the end of the buffer, or before
   the beginning of the buffer, then the buffer is discarded a new
-  `fs.read()` is made at the apporpriate location.
+  `fs.read()` is made at the appropriate location.
 
 * `stream.readPos` Read-only indication of where in the file the next
   `read()` will occur at.  This is always updated when
